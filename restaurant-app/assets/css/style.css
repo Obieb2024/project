@@ -1,0 +1,237 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #fff0f6 0%, #f8e6ff 100%);
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Container Login/Register */
+.login-container, .register-container {
+  width: 100%;
+  max-width: 400px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(123, 47, 247, 0.15);
+  overflow: hidden;
+  position: relative;
+}
+
+/* Header dengan Gradient */
+.login-header, .register-header {
+  background: linear-gradient(135deg, #7b2ff7 0%, #f107a3 100%);
+  color: #fff;
+  padding: 30px 20px;
+  text-align: center;
+  position: relative;
+}
+
+.login-header h2, .register-header h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.login-header small, .register-header small {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.icon-round {
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+  font-size: 24px;
+}
+
+.icon-round img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Form */
+form {
+  padding: 30px 20px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  background: #f9f9f9;
+  font-size: 16px;
+  margin-bottom: 20px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus {
+  border-color: #7b2ff7;
+  box-shadow: 0 0 8px rgba(123, 47, 247, 0.2);
+  outline: none;
+}
+
+/* Toggle Role */
+.toggle-role {
+  display: flex;
+  background: #f1f1f1;
+  border-radius: 25px;
+  padding: 5px;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.toggle-role label {
+  flex: 1;
+  text-align: center;
+  padding: 12px 20px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 25px;
+  transition: background 0.3s, color 0.3s;
+  color: #666;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.toggle-role input[type="radio"] {
+  display: none;
+}
+
+.toggle-role input[type="radio"]:checked + label {
+  background: linear-gradient(135deg, #7b2ff7, #f107a3);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(123, 47, 247, 0.3);
+}
+
+/* Password Input */
+.password-input {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #999;
+  transition: color 0.3s;
+}
+
+.toggle-password:hover {
+  color: #7b2ff7;
+}
+
+/* Button */
+.btn-login, .btn-register {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(135deg, #7b2ff7, #f107a3);
+  border: none;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-top: 10px;
+}
+
+.btn-login:hover, .btn-register:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(123, 47, 247, 0.3);
+}
+
+/* Links */
+p {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+p a {
+  color: #7b2ff7;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+p a:hover {
+  text-decoration: underline;
+}
+
+/* Error/Success Messages */
+.error-msg, .success-msg {
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.error-msg {
+  background: #ffe6e6;
+  color: #d63031;
+  border: 1px solid #fab1a0;
+}
+
+.success-msg {
+  background: #e6f7ff;
+  color: #0984e3;
+  border: 1px solid #74b9ff;
+}
+
+/* Demo Credentials */
+.demo-credentials {
+  margin-top: 20px;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  font-size: 12px;
+  color: #666;
+}
+
+.demo-credentials div {
+  margin-bottom: 5px;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .login-container, .register-container {
+    margin: 20px;
+    border-radius: 15px;
+  }
+  .login-header, .register-header {
+    padding: 20px;
+  }
+  form {
+    padding: 20px;
+  }
+}
